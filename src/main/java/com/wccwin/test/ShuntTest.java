@@ -12,7 +12,7 @@ public class ShuntTest {
     public static long time = 0l;
 
     public static void main(String[] args) throws Exception{
-        int size = 10000;
+        int size = 1 ;
 
         List<String> data = new ArrayList<String>(size);
         for (int i = 0; i < size ; i++ ){
@@ -43,26 +43,4 @@ public class ShuntTest {
                 new ShuntExecuter(data, ExecuterImpl.class, shuntRelay);
         shuntExecuter.shuntExecute();
     }
-
-    /*public static void test2(List<String> data){
-        for (int i = 0; i < data.size() ; i++ ){
-            String str = data.get(i).toString() + " | handle success! ";
-            data.set(i, str);
-            try {
-                Thread.sleep(1);
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-        }
-
-        for (String str : data){
-            System.out.println(str);
-        }
-        System.out.println(System.currentTimeMillis() - ShuntTest.time);
-
-    }*/
-
-
-
-
 }

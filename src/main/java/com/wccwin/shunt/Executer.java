@@ -30,14 +30,14 @@ public abstract class Executer<T> implements Runnable {
      * @param data
      * @return
      */
-    public abstract List<T> execute(List<T> data);
+    public abstract List execute(List<T> data);
 
     /**
      * action !!!
      */
     public void run() {
         //调用execute()得到结果集添加到监听器内
-        List<T> result = execute(this.getData());
+        List result = execute(this.getData());
         shuntListener.addSesult(this.getId(), result);
     }
 
